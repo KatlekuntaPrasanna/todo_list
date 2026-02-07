@@ -1,0 +1,19 @@
+import TodoItem from "./TodoItem";
+
+function TodoList({ todos, deleteTodo, toggleComplete, editTodo }) {
+    return (
+        <ul className="todo-list">
+            {todos.map(todo => (
+                <TodoItem
+                    key={todo.id}
+                    todo={todo}
+                    deleteTodo={deleteTodo}
+                    toggleComplete={toggleComplete}
+                    editTodo={editTodo}
+                />
+            ))}
+        </ul>
+    );
+}
+
+export default TodoList;
